@@ -1,3 +1,26 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+title {
+    font-size: 64px;
+    color: green;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+h1 {
+    font-size: 32px;
+    color: blue;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h2 {
+    font-size: 24px;
+    color: red;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+body {
+    background: #FFD700;
+}
+p {
+    font-size: 12px;
+    font-family: "Times New Roman", serif;
+    color: black;
+}
