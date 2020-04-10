@@ -1,0 +1,2 @@
+class RubyWinSource < ApplicationRecord
+end

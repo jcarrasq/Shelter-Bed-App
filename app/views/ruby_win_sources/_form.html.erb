@@ -1,0 +1,32 @@
+<%= form_with(model: ruby_win_source, local: true) do |form| %>
+  <% if ruby_win_source.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ruby_win_source.errors.count, "error") %> prohibited this ruby_win_source from being saved:</h2>
+
+      <ul>
+      <% ruby_win_source.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
