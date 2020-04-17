@@ -34,6 +34,8 @@ How I used rails generate scaffold beds bedCount:integer
 4. rails db:migrate
 
 
+
+
 using DatabaseV2
     1. gem install bundler
     2. bundle install
