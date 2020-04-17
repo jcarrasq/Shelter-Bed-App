@@ -10,8 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2020_04_17_160524) do
 
-ActiveRecord::Schema.define(version: 2020_04_03_191914) do
+  create_table "beds", force: :cascade do |t|
+    t.integer "bedCount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -20,7 +25,6 @@ ActiveRecord::Schema.define(version: 2020_04_03_191914) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-
   end
 
 end
