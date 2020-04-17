@@ -35,13 +35,18 @@ body {
 
 
 .main {
-    background-color: #43A047;
-    /* background-color: #BF360C; */
+    background-color: #212121;
     color: #FAFAFA;
     align-items: center;
     margin: 1.5em 0;
- 
+}
 
+.main.red {
+   background-color: #BF360C;
+}
+
+.main.green {
+    background-color: #43A047;
 }
 
 .footer {
