@@ -26,3 +26,13 @@ Things you may want to cover:
 *Reuben Was Here
 
 *Adam was here
+
+How I used rails generate scaffold beds bedCount:integer
+1. gem install bundler
+2. bundle install
+3. rails generate scaffold beds bedCount:integer
+
+
+using DatabaseV2
+    1. gem install bundler
+    2. bundle install
