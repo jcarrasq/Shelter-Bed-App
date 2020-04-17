@@ -1,15 +1,21 @@
 <html>
-    <head>
-        <meta charset = "utf-8">
-        <title>Welcome Page Index<title>
-    </head>
-    <body>
+<body>
 <h1>Shelter Bed App</h1>
 
-<img src = "https://images.neimanmarcus.com/ca/2/product_assets/H/B/H/R/5/NMHBHR5_mz.jpg" alt = "Shelter with beds" width = "300">
+<p>
+    <% if current_user %>
+        Logged in as <%= current_user.name %>
+        <%= link_to "Log Out", logout_path %>
+    <% else %>
+        <%= link_to "Sign Up (But only create one account)", signup_path %> or
+        <%= link_to "Log In", login_path %>
+    <% end %>
+</p>
+
+<img src = "https://www.wncw.org/sites/wncw/files/styles/x_large/public/201908/charlotte-3994039_1920_1_.jpg" alt = "City of Charlotte" width = "300">
 
 <h2>What do we do?</h2>
-
+<img src = "https://images.neimanmarcus.com/ca/2/product_assets/H/B/H/R/5/NMHBHR5_mz.jpg" alt = "Shelter with beds" width = "300">
 <p>
     Our job is that we give homeless people across the Charlotte area open shelters <br>
     where they will have a temporary stay for a certain amount of time, so that that <br>
@@ -17,18 +23,9 @@
     if they have access to a shelter they request and if it is already occupied or not.
 </p>
 
-<p>
-    <% if current_user %>
-    Logged in as <%= current_user.name %>
-    <%= link_to "Log Out", logout_path %>
-    <% else %>
-    <%= link_to "Log In", login_path %>
-    <% end %>
-</p>
-
 <h2>Map of Shelter Locations</h2>
 <img src = "https://www.charlottehomes4professionals.com/wp-content/uploads/2016/03/Charlotte-NC-Map1.png" alt = "see map of Charlotte" width = "500">
-<a href = "Map.html" class = "active"> Home </a>
+<a href = "Map.html" class = "active"> Locations </a>
 
 
 <h2>How Many Beds Are Available?</h2>
