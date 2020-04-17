@@ -9,7 +9,27 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
     <%= yield %>
+    </html>
+  <!--body>
+    
+    <!--header>
+    <!--% if signed_in? %>
+      #Signed in as: <!--%= current_user.email %>
+      <!--%= button_to 'Sign Out', sign_out_path, method: :delete %>
+    <!--% else %>
+      <!--%= button_to 'Sign In', sign_in_path %>
+    <!--% end %>
+    
+    </header>
+    
+    <section>
+      
+      <div id = "flash">
+      <!--% flash.each do |key, value| %>
+        <div class = "flash <!--%= key %>"><!--%= value %></div>
+    <!--% end %>
+    </div>
+
+    </section>
   </body>
-</html>
