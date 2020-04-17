@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :beds
   get 'welcome/index'
   
   #sets the welcome page as the default view
