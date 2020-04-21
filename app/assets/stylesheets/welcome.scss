@@ -1,48 +1,105 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-title {
-    font-size: 64px;
-    color: green;
-    font-family: "Arial Black", Gadget, sans-serif;
-    text-align: center;
+html {
+    min-height: 100vh;
 }
-h1 {
-    font-size: 32px;
-    color: blue;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    text-align: center;
-    font-style: italic;
-    background-color: #F0F8FF;
-}
-h2 {
-    font-size: 24px;
-    color: #00FFFF;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background-color: #00008B;
-}
-h3 {
-    font-size: 16px;
-    color: #9400D3;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-#faq{
-    background-color: #F0E68C;
-    color: #808080;
-}
-#questions {
-    background-color: #DC143C;
-    color: #FFB6C1;
-}
-#answers {
-    background-color: #9ACD32;
-    color: black;
-}
+
 body {
-    background: #FFD700;
+    margin: 0;
 }
-p {
-    font-size: 12px;
-    font-family: "Times New Roman", serif;
-    color: black;
+
+.header, .main, .footer, .gmap-canvas {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.header, .footer {
+    background-color: #212121;
+    color: #FAFAFA;
+    padding: 1em 1em;
+
+    /* prevents padding from extending the element box */
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+.header .header-text {
+    font-size: 3.0vw;
+}
+
+
+.main {
+    background-color: #212121;
+    color: #FAFAFA;
+    align-items: center;
+    margin: 1.5em 0;
+}
+
+.main.red {
+   background-color: #BF360C;
+}
+
+.main.green {
+    background-color: #43A047;
+}
+
+.footer {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.bed-logo {
+    width: 15%;
+}
+
+.indicate-icon {
+    width: 10%;
+}
+
+.bedfont {
+    font-size: 4.0vw;
+}
+
+.bedfont.phone {
+    margin-block-start: 0;
+}
+
+.footer-header {
+    font-size: 2.5vw;
+}
+
+.gmap-canvas {
+    height: 20em;
+    margin-bottom: 1.5em;
+}
+
+.footer-header.phone a, .bedfont.phone a{
+    text-decoration: underline;
+    text-emphasis: none;
+    color: #FAFAFA;
+}
+
+@media only screen and (min-width: 700px) {
+    .header, .main, .footer, .gmap-canvas {
+    width: 80%;
+    margin: 0 auto;
+    }
+
+    .main {
+        margin: 1.5em auto;
+        
+    }
+
+    .gmap-canvas {
+        height: 30em;
+        margin-bottom: 1.5em;
+    }
+
 }

@@ -1,63 +1,64 @@
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="homeless.css">-->
+  <script src="homeless.js"></script>
 
-<body>
-<h1>Shelter Bed App</h1>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-<p>
-    <% if current_user %>
-        Logged in as <%= current_user.name %>
-        <%= link_to "Log Out", logout_path %>
-    <% else %>
-        <%= link_to "Sign Up (But only create one account)", signup_path %> or
-        <%= link_to "Log In", login_path %>
-    <% end %>
-</p>
+  <title>Homeless Shelter</title>
+</head>
 
-<img src = "https://www.wncw.org/sites/wncw/files/styles/x_large/public/201908/charlotte-3994039_1920_1_.jpg" alt = "City of Charlotte" width = "300">
+  
+  <header class="header">
+<h1 class="header-text">Charlotte City Homeless Shelter</h1>
+  </header>
+    
 
-<h2>What do we do?</h2>
-<img src = "https://images.neimanmarcus.com/ca/2/product_assets/H/B/H/R/5/NMHBHR5_mz.jpg" alt = "Shelter with beds" width = "300">
-<p>
-    Our job is that we give homeless people across the Charlotte area open shelters <br>
-    where they will have a temporary stay for a certain amount of time, so that that <br>
-    they can regain their energy and find additional help. But we must determine <br>
-    if they have access to a shelter they request and if it is already occupied or not.
-</p>
+<!--Controls the background color of the css class main... look at welcome controller to see what the variables are-->
+<% if @beds.length == 1 %>
+  <%= @greenMain.html_safe %>
+<% else %>
+  <%= @redMain.html_safe %>
+<% end %>
 
-<h2>Map of Shelter Locations</h2>
-<img src = "https://www.charlottehomes4professionals.com/wp-content/uploads/2016/03/Charlotte-NC-Map1.png" alt = "see map of Charlotte" width = "500">
-<a href = "Map.html" class = "active"> Locations </a>
+<img src="<%= asset_path( 'bed.svg' ) %>" class="bed-logo" alt="bed icon">
+
+<!--Checkbox or X-Box image icon ... depending on if there are available beds -->
+<!--This does not work yet. It gets the length of the array, not the values within it-->
+<!--See: welcome controller to see what these variables do-->
+<% if @beds.length == 1 %>
+  <%= @beginImageHTML.html_safe %>
+  <%= asset_path( 'icon-y.svg' ) %>
+  <%= @endImageHTMLYES.html_safe %>
+<% else %>
+  <%= @beginImageHTML.html_safe %>
+  <%= asset_path( 'icon-x.svg' )%>
+  <%= @endImageHTMLNO.html_safe %>
+<% end %>
+
+<h2 class="bedfont bed-count">    
+    <% @beds.each do |bed| %>
+    <%= bed.bedCount %>
+    <% end %> 
+    Bed(s) Available</h2>
+<h3 class="bedfont phone">Call: <a href="tel:123-456-7890">123-456-7890</a></h3>
+  </main>
+    
+ <iframe class="gmap-canvas" 
+ src="https://maps.google.com/maps?q=unc%20char&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+ frameborder="0" scrolling="no" ></iframe> 
 
 
-<h2>How Many Beds Are Available?</h2>
-<img src = "https://images-na.ssl-images-amazon.com/images/I/71Tvs3XyjAL._AC_SL1500_.jpg" alt = "Click on the shelter picture" width = "200">
-<!-- Not set up yet -->
-<a href = "Beds.html" class = "active"> Look for beds </a>
+  <footer class="footer">
 
-<h2 id = "faq">Frequently Asked Questions (FAQs)</h2>
-<h3 id = "questions">Is this accessable on mobile?</h3>
-<p id = "answers">Yes, so that it will be useful for people who don't have access to a computer</p>
+<h3 class="footer-header phone">Phone: <a href="tel:123-456-7890">123-456-7890</a></h3>
 
-<h3 id = "questions">If there is no available shelter for me to sleep in a this time, what should I do?</h3>
-<p id = "answers">You are going to have to wait for your turn.</p>
+<h3 class="footer-header">Email: Fake-Charlotte-Shelter@gmail.com</h3>
 
-<h3 id = "questions">Once my time is up in the shelter, what's next?</h3>
-<p id = "answers">Unfortunately, you will have to be set out so that other people can have their turn. <br> 
-                But don't worry. You are welcome to come back again another time</p>
+<h3 class="footer-header">Address: 1231 River Road Charlotte, NC</h3>
 
-<h3 id = "questions">Am I allowed to use a shelter I already used before multiple times, or only once?</h3>
-<p id = "answers">Yes, of course.</p>
+  </footer>
 
-<h3 id = "questions">Do new shelters open in new locations every once in a while?</h3>
-<p id = "answers">It mostly depends on how the government will allow this.</p>
-
-<h3>Our Clinets</h3>
-<ul>
-    <li>Justin Carasquillo</li>
-    <li>Reuben Sanchez</li>
-    <li>Adam Stegall</li>
-    <li>Jovan Wissa</li>
-</ul>
-
-</body>
 </html>
