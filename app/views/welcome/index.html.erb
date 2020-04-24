@@ -17,10 +17,12 @@
     
 
 <!--Controls the background color of the css class main... look at welcome controller to see what the variables are-->
-<% if @beds.length == 1 %>
-  <%= @greenMain.html_safe %>
-<% else %>
-  <%= @redMain.html_safe %>
+<% @beds.each do |bed| %>
+    <% if bed.bedCount > 0 %>
+      <%= @greenMain.html_safe %>
+    <% else %>
+      <%= @redMain.html_safe %>
+    <% end %> 
 <% end %>
 
 <img src="<%= asset_path( 'bed.svg' ) %>" class="bed-logo" alt="bed icon">
