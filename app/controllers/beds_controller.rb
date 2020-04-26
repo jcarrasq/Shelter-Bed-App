@@ -1,5 +1,6 @@
 class BedsController < ApplicationController
   before_action :set_bed, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_user!
 
   # GET /beds
   # GET /beds.json
@@ -20,6 +21,13 @@ class BedsController < ApplicationController
   # GET /beds/1/edit
   def edit
   end
+  
+  def ensure_user!
+    unless current_user
+      redirect_to welcome_index_path, danger: "You're not logged in! You can't go there!"
+    end
+  end
+  
 
   # POST /beds
   # POST /beds.json
