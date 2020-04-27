@@ -15,16 +15,7 @@
 <h1 class="header-text">Charlotte City Homeless Shelter</h1>
   </header>
     
-  <p>
-    <% if current_user %>
-    Logged in as <%= current_user.name %>
-    <%= link_to "Log Out", logout_path %>
-    <%= link_to 'Go to the Beds', beds_path %>
-    <% else %>
-    <%= link_to "Sign Up", signup_path %> or
-    <%= link_to "Log In", login_path %>
-    <% end %>
-</p>  
+  
 
 <!--Controls the background color of the css class main... look at welcome controller to see what the variables are-->
 <% @beds.each do |bed| %>
@@ -69,6 +60,16 @@
 <h3 class="footer-header">Email: Fake-Charlotte-Shelter@gmail.com</h3>
 
 <h3 class="footer-header">Address: 1231 River Road Charlotte, NC</h3>
+
+
+    <% if current_user %>
+    Logged in as <%= current_user.name %>
+    <%= link_to "Log Out", logout_path %>
+    <%= link_to 'Go to Bed-Count Editor', beds_path %>
+    <% else %>
+    <%= link_to "Admin Login", login_path, :class => "footer-header login" %>
+    <% end %>
+
 
   </footer>
 

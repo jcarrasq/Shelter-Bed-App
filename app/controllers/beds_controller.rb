@@ -50,7 +50,7 @@ class BedsController < ApplicationController
   def update
     respond_to do |format|
       if @bed.update(bed_params)
-        format.html { redirect_to @bed, notice: 'Bed was successfully updated.' }
+        format.html { redirect_to beds_path, notice: 'Bed was successfully updated.' }
         format.json { render :show, status: :ok, location: @bed }
       else
         format.html { render :edit }

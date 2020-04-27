@@ -1,28 +1,34 @@
+<head>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Beds</h1>
+<div class="bed-header">Current Bed Count</div>
 
 <table>
-  <thead>
-    <tr>
-      <th>Bedcount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <tr>
+  <% @beds.each do |bed| %>
+  <td> <div class="bed-header num"><%= bed.bedCount %></div> </td>
 
-  <tbody>
-    <% @beds.each do |bed| %>
-      <tr>
-        <td><%= bed.bedCount %></td>
-        <td><%= link_to 'Show', bed %></td>
-        <td><%= link_to 'Edit', edit_bed_path(bed) %></td>
-        <td><%= link_to 'Destroy', bed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+ <td> <%= link_to 'Edit The Bed Count', edit_bed_path(bed), :class => "bed-button" %> </td>
+  <% end %>
+ 
+   </tr>
 </table>
+ 
+<%= link_to "Log Out", logout_path, :class => "bed-button nav" %>
+<%= link_to 'Back to Home', welcome_index_path, :class => "bed-button nav" %>
 
-<br>
 
-<%= link_to 'New Bed', new_bed_path %>
-<%= link_to 'Back to Home', welcome_index_path %>
+
+
+
+
+
+<!--Old code just in case it's needed. anything within the if false will not run-->
+<% if false %>
+        <%= link_to 'New Bed', new_bed_path %>
+        <td><%= link_to 'Show', bed %></td>
+        <td><%= link_to 'Destroy', bed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>

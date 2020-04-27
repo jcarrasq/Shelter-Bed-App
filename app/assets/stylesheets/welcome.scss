@@ -7,6 +7,7 @@ html {
 
 body {
     margin: 0;
+    // line-height: 30px;
 }
 
 .header, .main, .footer, .gmap-canvas {
@@ -52,6 +53,7 @@ body {
 .footer {
     align-items: flex-start;
     flex-direction: column;
+    
 }
 
 
@@ -75,6 +77,10 @@ body {
     font-size: 2.5vw;
 }
 
+.footer-header.login {
+
+}
+
 .gmap-canvas {
     height: 20em;
     margin-bottom: 1.5em;
@@ -82,7 +88,6 @@ body {
 
 .footer-header.phone a, .bedfont.phone a{
     text-decoration: underline;
-    text-emphasis: none;
     color: #FAFAFA;
 }
 

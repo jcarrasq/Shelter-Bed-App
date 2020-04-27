@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :bedCount %>
-    <%= form.number_field :bedCount %>
+    <%= form.number_field :bedCount, min: 0 %>
   </div>
 
   <div class="actions">
