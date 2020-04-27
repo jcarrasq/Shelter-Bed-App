@@ -54,6 +54,7 @@ body {
     align-items: flex-start;
     flex-direction: column;
     
+    
 }
 
 
@@ -75,10 +76,14 @@ body {
 
 .footer-header {
     font-size: 2.5vw;
+    margin: 0.5em;
 }
 
-.footer-header.login {
-
+a.footer-header.login {
+    text-decoration: underline;
+    color: #FAFAFA;
+    font-size: 1vw;
+    align-self: center;
 }
 
 .gmap-canvas {

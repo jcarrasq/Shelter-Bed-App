@@ -56,15 +56,14 @@
 
 <h3 class="footer-header phone">Phone: <a href="tel:123-456-7890">123-456-7890</a></h3>
 
-<h3 class="footer-header">Email: Fake-Charlotte-Shelter@gmail.com</h3>
+<h3 class="footer-header phone">Email: <a href="mailto:Fake-Charlotte-Shelter@gmail.com">Fake-Charlotte-Shelter@gmail.com</a></h3>
 
-<h3 class="footer-header">Address: 1231 River Road Charlotte, NC</h3>
+<h3 class="footer-header phone">Address: <a href="fake link for fake address">1231 River Road Charlotte, NC</a></h3>
 
 
     <% if current_user %>
-    Logged in as <%= current_user.name %>
-    <%= link_to "Log Out", logout_path %>
-    <%= link_to 'Go to Bed-Count Editor', beds_path %>
+    <%= link_to 'Go to Bed-Count Editor', beds_path, :class => "footer-header login" %>
+    <%= link_to "Log Out", logout_path, :class => "footer-header login" %>
     <% else %>
     <%= link_to "Admin Login", login_path, :class => "footer-header login" %>
     <% end %>

@@ -45,7 +45,7 @@ updating the number of beds
  
 
 Changelog: 
-April 26, 2020 Bed and Login Page CSS and Quality of Life Update
+April 26, 2020 Bed and Login Page CSS and Quality of Life Update --- Reuben Sanchez
 1. Bed Page CSS updated with buttons and larger fonts
 2. Bed Page links added a logout button
 3. Logging in now redirects to the bed page immediatly
@@ -54,3 +54,9 @@ April 26, 2020 Bed and Login Page CSS and Quality of Life Update
 6. Login put at bottom of main page
 7. Signup link removed on main page (still need to make it admin access only)
 8. Scaffolding CSS cut out or edited because it messed with other css
+9. removed 'show' in the user page for non-logged in users because it still allowed for user editing
+10. made creating new user account only available for logged in users.
+11. removed "logged in as user" on home page
+12. Login page is updated with css.. hoiwever the css can be found in the beds css file
+13. merged Jovan's updated files
+14. made email clickable and address openable
