@@ -13,6 +13,9 @@
   
   <header class="header">
 <h1 class="header-text">Charlotte City Homeless Shelter</h1>
+<% if @beds.length <= 0 %>
+<h1>!!! CONFIGURE APP FIRST. LOOK AT README FILE !!!</h1>
+<% end %>
   </header>
     
 
@@ -29,7 +32,8 @@
 <!--Checkbox or X-Box image icon ... depending on if there are available beds -->
 <!--This does not work yet. It gets the length of the array, not the values within it-->
 <!--See: welcome controller to see what these variables do-->
-<% if @beds.length == 1 %>
+<% @beds.each do |bed| %>
+    <% if bed.bedCount > 0 %>
   <%= @beginImageHTML.html_safe %>
   <%= asset_path( 'icon-y.svg' ) %>
   <%= @endImageHTMLYES.html_safe %>
@@ -37,6 +41,7 @@
   <%= @beginImageHTML.html_safe %>
   <%= asset_path( 'icon-x.svg' )%>
   <%= @endImageHTMLNO.html_safe %>
+<% end %>
 <% end %>
 
 <h2 class="bedfont bed-count">    
