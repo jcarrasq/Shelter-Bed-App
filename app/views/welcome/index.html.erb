@@ -13,6 +13,8 @@
   
   <header class="header">
 <h1 class="header-text">Charlotte City Homeless Shelter</h1>
+
+<!--Checks if no bed objects are created yet. This must be setup at the first time running the app. -->
 <% if @beds.length <= 0 %>
 <h1>!!! CONFIGURE APP FIRST. LOOK AT README FILE !!!</h1>
 <% end %>
