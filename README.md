@@ -9,7 +9,8 @@ INITIAL SETUP AND CONFIGURATION >>> Instructions based on the user using a AWS C
 5. At this point the app should be running
 6. Go to signup page by manually adding 'signup' to the end of the website url (url will looks similar to this.. https://c95617fcb85e4434b2cedbc6fcc3ad3a.vfs.cloud9.us-east-1.amazonaws.com/signup)
 7. sign up a new account. Any username is fine. Email: nadia@example.com Password: qwertyuiop
-8. go to the users page by manually adding 'users' to the end of the website url (url will looks similar to this.. https://c95617fcb85e4434b2cedbc6fcc3ad3a.vfs.cloud9.us-east-1.amazonaws.com/users)
+8. after creating the account, go to the home page and click the login link at the bottom of the page
+8. after logging in, go to the users page by manually adding 'users' to the end of the website url (url will looks similar to this.. https://c95617fcb85e4434b2cedbc6fcc3ad3a.vfs.cloud9.us-east-1.amazonaws.com/users)
 9. Find and click the button that says INITIAL CONFIGURE ONLY >>> New Bed
 10. create the bed object, preferrably with an low integer like 0 or 2
 11. Initial setup is complete.
@@ -38,7 +39,7 @@ Changelog April 28, 2020 the configuration update -- Reuben Sanchez
 1. Main page error fixed where icon would not update automatically.
 2. Main page header added when the initial configuration is not setup yet.
 3. updated multiple files to aid in the initial configuration of the app.. most important were the new user page and users page.
-4. signup page is only accessible when there is a logged in user OR if there are no users created yet.
+4. signup page is always accessible for the sake of the application being tested by others.
 4. updated application controller to where if the only user on the app was accidentally deleted, the app can still run.
 5. updated README for helping setup the application when it is first downloaded.
 
